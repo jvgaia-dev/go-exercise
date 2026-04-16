@@ -4,13 +4,10 @@ import (
 	"fmt"
 )
 
-type hotdog int
-var b hotdog = 101
-
 func main() {
-	x := 32
-	fmt.Println(x)
+	s := "hello world"
 
-	x = int(b)
-	fmt.Println(x)
+	for i := 0; i < len(s); i++ {
+		fmt.Printf("%d", i)
+	}
 }
