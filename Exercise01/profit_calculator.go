@@ -24,6 +24,7 @@ func main() {
 	earningsAfterTax := earningsBeforeTax - taxAmount
 	ratio := earningsBeforeTax / earningsAfterTax
 
+	fmt.Println("-------------")
 	fmt.Println("Earnings before tax: ", earningsBeforeTax)
 	fmt.Println("Earnings after tax: ", earningsAfterTax)
 	fmt.Println("Ratio: ", ratio)
