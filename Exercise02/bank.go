@@ -34,5 +34,7 @@ func main() {
 		accountBalance -= withdrawAmount //accountBalance = accountBalance - withdrawAmount
 
 		fmt.Print("balance updated! new amount: ", accountBalance)
+	} else {
+		fmt.Println("Exiting...")
 	}
 }
