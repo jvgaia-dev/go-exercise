@@ -10,6 +10,7 @@ func main() {
 	fmt.Println("Welcome to Go Bank")
 
 	for {
+		fmt.Println("--------------------------")
 		fmt.Println("What you want to do?")
 		fmt.Println("1. Check balance")
 		fmt.Println("2. Deposity money")
@@ -20,9 +21,11 @@ func main() {
 		fmt.Print("Your choice: ")
 		fmt.Scan(&choice)
 
-		if choice == 1 {
+		switch choice {
+		case 1:
 			fmt.Println(accountBalance)
-		} else if choice == 2 {
+
+		case 2:
 			fmt.Print("Your deposit: ")
 			var depositAmount float64
 			fmt.Scan(&depositAmount)
@@ -35,7 +38,8 @@ func main() {
 			accountBalance += depositAmount //accountBalance = accountBalance + depositAmount
 
 			fmt.Println("balance updated! new amount: ", accountBalance)
-		} else if choice == 3 {
+
+		case 3:
 			fmt.Print("Withdraw amount: ")
 			var withdrawAmount float64
 			fmt.Scan(&withdrawAmount)
@@ -53,11 +57,15 @@ func main() {
 			accountBalance -= withdrawAmount //accountBalance = accountBalance - withdrawAmount
 
 			fmt.Println("balance updated! new amount: ", accountBalance)
-		} else {
+
+		case 4:
 			fmt.Println("Exiting...")
-			break
+			fmt.Println("Thanks for choosing our bank")
+			return
+			//break
+
+		default:
+			fmt.Println("Invalid input")
 		}
 	}
-
-	fmt.Println("Thanks for choosing our bank")
 }
